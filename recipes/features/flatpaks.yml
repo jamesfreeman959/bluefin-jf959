@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
+# Note: The can only be one list of flatpaks becuase
+# you can really only run this module once per build.  An appparent fix for this
+# (see https://github.com/blue-build/modules/pull/263) doesn't do what we need --
+# the fix only makes sure the effects of the 1st module run are not overwritten
+# (any subsequent runs are ignored).
+
+modules:
+  - type: default-flatpaks
+    configurations:
+    - notify: true 
+      scope: system
+      install:
+        # Base Flatpaks
+        # (System Mgmt, Basic Productivity)
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
+        - io.missioncenter.MissionCenter
+        - org.cockpit_project.CockpitClient
+        - org.gnome.Logs
+        - org.gnome.Calculator
+        - org.gnome.TextEditor
+        - org.gnome.font-viewer
+        - org.gnome.FileRoller        
+        - ca.desrt.dconf-editor
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.Weather
+        - org.gnome.Papers
+        - org.gnome.Loupe
+        - org.gnome.baobab
+        - com.github.rafostar.Clapper
+        - org.gnome.Snapshot 
+        - org.libreoffice.LibreOffice        
+        - com.nextcloud.desktopclient.nextcloud
+        - us.zoom.Zoom
+        - org.fedoraproject.MediaWriter
+        - io.github.flattool.Warehouse
+        - org.gnome.SimpleScan
+        - org.gustavoperedo.FontDownloader
+        - org.gnome.NautilusPreviewer
+        - com.github.PintaProject.Pinta
+        - org.gnome.clocks
+        - org.gnome.Connections
+        - org.gnome.DejaDup
+
+        # Personal Internet Life
+        - com.discordapp.Discord
+        # - com.spotify.Client
+        - com.bitwarden.desktop
+        - de.swsnr.keepmeawake
+        - com.vivaldi.Vivaldi
+        - org.ferdium.Ferdium
+
+        # Media/Art Production
+        - org.gimp.GIMP 
+        - org.audacityteam.Audacity
+        - org.darktable.Darktable
+        - org.openshot.OpenShot 
+        # - net.sourceforge.Hugin 
+
+        # Developer Tools
+        - org.sqlitebrowser.sqlitebrowser 
+        - io.dbeaver.DBeaverCommunity
+        - com.ranfdev.DistroShelf
+        - sh.loft.devpod
+        - me.iepure.devtoolbox
+        - io.podman_desktop.PodmanDesktop
+        - app.getclipboard.Clipboard

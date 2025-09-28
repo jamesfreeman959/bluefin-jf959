@@ -1,0 +1,11 @@
+[Unit]
+Description=Check for proper symlinks to make Google Chrome install work
+Wants=network-online.target
+After=system-flatpak-setup.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/check-chrome-symlinks
+
+[Install]
+WantedBy=multi-user.target

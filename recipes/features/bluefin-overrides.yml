@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+- type: files
+  files:
+  - source: dconf-bluefin
+    destination: /etc/dconf/db/distro.d
+# - type: script
+#   snippets:
+#   # Disable VPNs we don't use
+#   - "systemctl disable tailscaled"
+#   # Disable the abomination known as rootful Docker
+#   - "systemctl disable docker.service docker.socket"
+#   # Disable Starship by default
+#   - "sed -i '/starship init bash/d' /etc/bashrc"

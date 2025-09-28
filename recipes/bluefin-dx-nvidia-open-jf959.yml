@@ -1,0 +1,19 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: bluefin-dx-nvidia-open-jf959
+# description will be included in the image's metadata
+description: Bluefin DX with my personal preferences baked in. This bootable container image follows Bluefin's stable image channel.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+image-version: stable # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: features/bluefin-features.yml
+  # - from-file: features/wallpaper-extra.yml
+  - type: gschema-overrides  # Override Bluefin's overrides of Gnome default fonts
+    include:
+      - zz41-tr-bluefin.gschema.override

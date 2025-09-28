@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+    install:
+      packages:
+        - bluefin-backgrounds
+        - gnome-backgrounds-extras
+        - f41-backgrounds-base
+        - f40-backgrounds-base
+        - f39-backgrounds-base
+        - f35-backgrounds-base
+        - f26-backgrounds-extras-base
+        - variety
+
+  - type: script
+    scripts:      
+      # - install-system76-wallpaper.sh
+      # - install-framework-wallpaper.sh
+      - add-variety-to-autostart.sh
