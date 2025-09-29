@@ -15,6 +15,6 @@ modules:
         - mc
         - onedrive
         - 1password
-        - gh-cli
+        - gh
         - duc
 
