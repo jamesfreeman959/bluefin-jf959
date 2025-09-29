@@ -5,6 +5,7 @@ modules:
   - from-file: features/system-files.yml
   - from-file: features/application-rpms.yml
   - from-file: features/google-chrome.yml
+  - from-file: features/1password.yml
   - from-file: features/netbird.yml
   - from-file: features/fonts.yml
   - from-file: features/gnome-ui-fixes.yml
