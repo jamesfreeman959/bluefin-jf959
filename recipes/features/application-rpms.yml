@@ -16,4 +16,6 @@ modules:
         - onedrive
         - gh
         - duc
+        - age
+        - gopass
 
