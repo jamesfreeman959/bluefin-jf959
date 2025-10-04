@@ -18,4 +18,7 @@ modules:
         - duc
         - age
         - gopass
+        - opentofu
+        - cloud-utils-cloud-localds
+        - pipx
 
