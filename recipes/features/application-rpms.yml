@@ -21,4 +21,5 @@ modules:
         - opentofu
         - cloud-utils-cloud-localds
         - pipx
+        - awscli2
 
