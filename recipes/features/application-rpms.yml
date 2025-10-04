@@ -22,4 +22,5 @@ modules:
         - cloud-utils-cloud-localds
         - pipx
         - awscli2
+        - chezmoi
 
