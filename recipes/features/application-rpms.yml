@@ -23,4 +23,5 @@ modules:
         - pipx
         - awscli2
         - chezmoi
-
+        - zsh-autosuggestions
+        - zsh-syntax-highlighting
