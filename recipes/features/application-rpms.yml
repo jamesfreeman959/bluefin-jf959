@@ -27,3 +27,5 @@ modules:
         - zsh-syntax-highlighting
         # Need Node.js for some tools like Claude Code
         - nodejs
+        # ThinLinc client
+        - https://www.cendio.com/downloads/clients/thinlinc-client-4.19.0-4005.x86_64.rpm
