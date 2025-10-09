@@ -25,3 +25,5 @@ modules:
         - chezmoi
         - zsh-autosuggestions
         - zsh-syntax-highlighting
+        # Need Node.js for some tools like Claude Code
+        - nodejs
