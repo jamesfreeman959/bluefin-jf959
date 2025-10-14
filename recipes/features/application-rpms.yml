@@ -16,6 +16,7 @@ modules:
         - onedrive
         - gh
         - duc
+        - nmap
         - age
         - gopass
         - opentofu
