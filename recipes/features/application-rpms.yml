@@ -30,3 +30,5 @@ modules:
         - nodejs
         # ThinLinc client
         - https://www.cendio.com/downloads/clients/thinlinc-client-4.19.0-4005.x86_64.rpm
+        - NetworkManager-l2tp
+        - NetworkManager-l2tp-gnome
