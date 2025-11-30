@@ -2,6 +2,7 @@
 modules:
   - type: dnf
     install:
+      install-setopt: tsflags=noscripts
       packages:
         - netbird
         - libappindicator-gtk3
