@@ -7,12 +7,12 @@ modules:
         - libappindicator
         - gnome-shell-extension-appindicator
   - type: rpm-ostree
-      repos: 
-        - https://pkgs.netbird.io/yum/
-      keys:
-        - https://pkgs.netbird.io/yum/repodata/repomd.xml.key
-      install:
-        - netbird
-        - netbird-ui
+    repos: 
+      - https://pkgs.netbird.io/yum/
+    keys:
+      - https://pkgs.netbird.io/yum/repodata/repomd.xml.key
+    install:
+      - netbird
+      - netbird-ui
 
         
