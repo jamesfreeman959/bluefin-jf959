@@ -34,3 +34,4 @@ modules:
         - NetworkManager-l2tp-gnome
         - lsd
         - wireshark
+        - strace
