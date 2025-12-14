@@ -35,3 +35,5 @@ modules:
         - lsd
         - wireshark
         - strace
+        - iperf3
+        - fio
