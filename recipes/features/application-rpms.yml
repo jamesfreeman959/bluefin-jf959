@@ -38,4 +38,5 @@ modules:
         - iperf3
         - fio
         - iftop
+        - autofs
 
