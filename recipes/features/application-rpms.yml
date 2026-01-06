@@ -39,4 +39,5 @@ modules:
         - fio
         - iftop
         - autofs
+        - mosh
 
