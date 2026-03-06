@@ -40,4 +40,5 @@ modules:
         - iftop
         - autofs
         - mosh
+        - libsoup3-devel
 
