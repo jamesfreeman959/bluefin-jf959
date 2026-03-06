@@ -41,4 +41,5 @@ modules:
         - autofs
         - mosh
         - libsoup3-devel
+        - pinentry-tty
 

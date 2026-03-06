@@ -6,7 +6,7 @@ name: bluefin-jf959
 description: Bluefin DX with my personal preferences baked in. This bootable container image follows Bluefin's stable image channel.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: stable # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
