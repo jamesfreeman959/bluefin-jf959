@@ -40,6 +40,13 @@ modules:
         - iftop
         - autofs
         - mosh
-        - libsoup3-devel
         - pinentry-tty
-
+        # Required for pake builds
+        - libsoup3-devel
+        - cairo-devel
+        - gtk3-devel
+        - gdk-pixbuf2-devel
+        - pango-devel
+        - atk-devel
+        - javascriptcoregtk4.1-devel
+        
