@@ -49,4 +49,5 @@ modules:
         - pango-devel
         - atk-devel
         - javascriptcoregtk4.1-devel
+        - webkit2gtk4.1-devel
         
