@@ -41,6 +41,7 @@ modules:
         - autofs
         - mosh
         - pinentry-tty
+        - plocate
         # Required for pake builds
         - libsoup3-devel
         - cairo-devel
@@ -50,4 +51,8 @@ modules:
         - atk-devel
         - javascriptcoregtk4.1-devel
         - webkit2gtk4.1-devel
+        - libayatana-appindicator-gtk3
+        - libayatana-appindicator-gtk3-devel                                                                    
+        - libappindicator-gtk3
+        - libappindicator-gtk3-devel
         
