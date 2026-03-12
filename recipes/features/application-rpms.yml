@@ -55,4 +55,5 @@ modules:
         - libayatana-appindicator-gtk3-devel                                                                    
         - libappindicator-gtk3
         - libappindicator-gtk3-devel
+        - gcc-c++
         
