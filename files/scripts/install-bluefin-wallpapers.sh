@@ -4,31 +4,29 @@ set -eou pipefail
 
 echo "Installing Bluefin wallpapers from ublue-os/artwork..."
 
-# Get the download URL for the latest bluefin GNOME wallpapers release
-DOWNLOAD_URL=$(curl -s "https://api.github.com/repos/ublue-os/artwork/releases" | \
-    jq -r '[.[] | select(.tag_name | startswith("bluefin-v"))][0].assets[] | select(.name == "bluefin-wallpapers-gnome.tar.zstd") | .browser_download_url')
-
-if [ -z "${DOWNLOAD_URL}" ]; then
-    echo "ERROR: Could not find bluefin-wallpapers-gnome.tar.zstd in releases"
-    exit 1
-fi
-
-echo "Downloading from: ${DOWNLOAD_URL}"
-
-TMPDIR=$(mktemp -d)
-trap "rm -rf ${TMPDIR}" EXIT
-
-curl -L -o "${TMPDIR}/bluefin-wallpapers-gnome.tar.zstd" "${DOWNLOAD_URL}"
-zstd -d "${TMPDIR}/bluefin-wallpapers-gnome.tar.zstd" -o "${TMPDIR}/bluefin-wallpapers-gnome.tar"
-tar -x -f "${TMPDIR}/bluefin-wallpapers-gnome.tar" -C "${TMPDIR}"
-
 mkdir -p /usr/share/backgrounds/bluefin
 mkdir -p /usr/share/gnome-background-properties
 
-# JXL images and day/night XML slide show files go into the backgrounds directory
-find "${TMPDIR}" -maxdepth 1 \( -name "*.jxl" -o -name "*.xml" \) -exec cp {} /usr/share/backgrounds/bluefin/ \;
+# Download wallpaper images (JXL) and day/night slideshow XMLs
+echo "Downloading wallpaper images..."
+IMAGE_LIST=$(curl -s "https://api.github.com/repos/ublue-os/artwork/contents/wallpapers/bluefin/images" | \
+    jq -r '.[] | .download_url')
 
-# GNOME background properties XMLs register wallpapers with the GNOME picker
-cp "${TMPDIR}/gnome-background-properties/"*.xml /usr/share/gnome-background-properties/
+for url in ${IMAGE_LIST}; do
+    filename=$(basename "${url}" | cut -d'?' -f1)
+    echo "  ${filename}"
+    curl -sL -o "/usr/share/backgrounds/bluefin/${filename}" "${url}"
+done
+
+# Download GNOME background properties XMLs (registers wallpapers in the picker)
+echo "Downloading GNOME background properties..."
+PROPS_LIST=$(curl -s "https://api.github.com/repos/ublue-os/artwork/contents/wallpapers/bluefin/gnome-background-properties" | \
+    jq -r '.[] | .download_url')
+
+for url in ${PROPS_LIST}; do
+    filename=$(basename "${url}" | cut -d'?' -f1)
+    echo "  ${filename}"
+    curl -sL -o "/usr/share/gnome-background-properties/${filename}" "${url}"
+done
 
 echo "Bluefin wallpapers installed successfully"
