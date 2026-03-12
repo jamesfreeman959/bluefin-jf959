@@ -19,7 +19,8 @@ TMPDIR=$(mktemp -d)
 trap "rm -rf ${TMPDIR}" EXIT
 
 curl -L -o "${TMPDIR}/bluefin-wallpapers-gnome.tar.zstd" "${DOWNLOAD_URL}"
-tar -x --zstd -f "${TMPDIR}/bluefin-wallpapers-gnome.tar.zstd" -C "${TMPDIR}"
+zstd -d "${TMPDIR}/bluefin-wallpapers-gnome.tar.zstd" -o "${TMPDIR}/bluefin-wallpapers-gnome.tar"
+tar -x -f "${TMPDIR}/bluefin-wallpapers-gnome.tar" -C "${TMPDIR}"
 
 mkdir -p /usr/share/backgrounds/bluefin
 mkdir -p /usr/share/gnome-background-properties
