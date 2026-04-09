@@ -56,4 +56,6 @@ modules:
         - libappindicator-gtk3
         - libappindicator-gtk3-devel
         - gcc-c++
+        - libxcrypt-compat.x86_64
+        - google-cloud-cli
         
