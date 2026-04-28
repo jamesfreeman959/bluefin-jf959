@@ -61,4 +61,7 @@ modules:
         # Firefox for brow.sh
         - firefox
         - firefox-langpacks
+        # Terminal mouse support
+        - gpm
+        - gpm-devel
         
