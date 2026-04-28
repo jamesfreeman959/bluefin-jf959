@@ -58,4 +58,7 @@ modules:
         - gcc-c++
         - libxcrypt-compat.x86_64
         - google-cloud-cli
+        # Firefox for brow.sh
+        - firefox
+        - firefox-langpacks
         
