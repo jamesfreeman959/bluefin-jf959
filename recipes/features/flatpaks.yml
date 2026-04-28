@@ -33,7 +33,7 @@ modules:
         - com.github.rafostar.Clapper
         - org.gnome.Snapshot 
         - org.libreoffice.LibreOffice        
-        - com.nextcloud.desktopclient.nextcloud
+        #- com.nextcloud.desktopclient.nextcloud
         - us.zoom.Zoom
         - org.fedoraproject.MediaWriter
         - io.github.flattool.Warehouse
